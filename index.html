@@ -1,1 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Danah Alalwan - Software Engineering student portfolio showcasing projects, skills, GitHub repositories, and contact information."
+  />
+  <title>Danah Alalwan | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="scrollProgress"></div>
 
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">Danah<span>Portfolio</span></a>
+
+      <button id="menuToggle" class="menu-toggle" aria-label="Open navigation">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#visitor">Greeting</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+        Toggle Theme
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Software Engineering Student</p>
+          <h1>Hello, I'm Danah Alalwan</h1>
+          <p class="hero-subtitle" id="typingText">
+            I build clean, responsive, and user-friendly web applications.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <h3>4+</h3>
+              <p>Featured Projects</p>
+            </div>
+            <div class="stat-card">
+              <h3>1</h3>
+              <p>Portfolio Web App</p>
+            </div>
+            <div class="stat-card">
+              <h3>API</h3>
+              <p>GitHub Integration</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Quick Summary</h2>
+          <p>
+            I'm a Software Engineering student passionate about web development,
+            problem solving, and building professional digital experiences.
+          </p>
+          <ul class="summary-list">
+            <li>Responsive web design</li>
+            <li>JavaScript interactivity</li>
+            <li>GitHub API integration</li>
+            <li>Clean code and documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">About</p>
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="card">
+            <p>
+              I am Danah Alalwan, a Software Engineering student interested in
+              creating polished and practical web applications. This portfolio
+              brings together everything I learned in the course, including
+              HTML, CSS, JavaScript, responsive design, local storage, API
+              integration, validation, and documentation.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Highlights</h3>
+            <ul class="bullet-list">
+              <li>Responsive and accessible layout</li>
+              <li>Dynamic project filtering, sorting, and searching</li>
+              <li>Live GitHub repository integration</li>
+              <li>Visitor personalization with localStorage</li>
+              <li>Professional documentation and deployment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Skills</p>
+          <h2>Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, JavaScript, Responsive Design</p>
+          </article>
+          <article class="skill-card">
+            <h3>Programming</h3>
+            <p>Problem Solving, DOM Manipulation, Form Validation</p>
+          </article>
+          <article class="skill-card">
+            <h3>Tools</h3>
+            <p>Git, GitHub, VS Code, Browser DevTools</p>
+          </article>
+          <article class="skill-card">
+            <h3>Workflow</h3>
+            <p>Documentation, Testing, AI-assisted development</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Projects</p>
+          <h2>Featured Projects</h2>
+        </div>
+
+        <div class="controls">
+          <div class="control-group">
+            <label for="categoryFilter">Filter by Category</label>
+            <select id="categoryFilter">
+              <option value="all">All</option>
+              <option value="web">Web</option>
+              <option value="javascript">JavaScript</option>
+              <option value="react">React</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="sortProjects">Sort By</label>
+            <select id="sortProjects">
+              <option value="default">Default</option>
+              <option value="title">Title (A-Z)</option>
+              <option value="date-new">Newest First</option>
+              <option value="date-old">Oldest First</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="searchInput">Search</label>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by title or description"
+            />
+          </div>
+        </div>
+
+        <div class="project-grid" id="projects-container">
+          <article
+            class="project-card"
+            data-category="web"
+            data-title="Portfolio Website"
+            data-date="2026-04-10"
+          >
+            <h3>Portfolio Website</h3>
+            <p>
+              A polished personal portfolio website showcasing my profile,
+              skills, and projects with responsive design and interactive
+              sections.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Web</span>
+              <button class="details-btn">View Details</button>
+            </div>
+          </article>
+
+          <article
+            class="project-card"
+            data-category="javascript"
+            data-title="Task Manager"
+            data-date="2026-03-20"
+          >
+            <h3>Task Manager</h3>
+            <p>
+              A JavaScript-based application for managing daily tasks with
+              dynamic updates and a clean user interface.
+            </p>
+            <div class="project-meta">
+              <span class="tag">JavaScript</span>
+              <button class="details-btn">View Details</button>
+            </div>
+          </article>
+
+          <article
+            class="project-card"
+            data-category="react"
+            data-title="Student Cards App"
+            data-date="2026-02-15"
+          >
+            <h3>Student Cards App</h3>
+            <p>
+              A React application that displays reusable student card
+              components using props and array mapping.
+            </p>
+            <div class="project-meta">
+              <span class="tag">React</span>
+              <button class="details-btn">View Details</button>
+            </div>
+          </article>
+
+          <article
+            class="project-card"
+            data-category="web"
+            data-title="StockMind"
+            data-date="2026-01-25"
+          >
+            <h3>StockMind</h3>
+            <p>
+              A beginner-friendly platform for stock analysis and investment
+              simulation focused on simple and clear user experience.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Web</span>
+              <button class="details-btn">View Details</button>
+            </div>
+          </article>
+        </div>
+
+        <p id="noResultsMessage" class="message empty-state"></p>
+      </div>
+    </section>
+
+    <section id="github" class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">GitHub</p>
+          <h2>Live GitHub Repositories</h2>
+        </div>
+
+        <p class="section-text">
+          This section fetches my latest public repositories using the GitHub API.
+        </p>
+
+        <div id="repo-container" class="repo-grid"></div>
+        <p id="repo-message" class="message"></p>
+      </div>
+    </section>
+
+    <section id="visitor" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Personalization</p>
+          <h2>Personalized Greeting</h2>
+        </div>
+
+        <div class="card visitor-card">
+          <p>Enter your name and the site will remember it using localStorage.</p>
+
+          <div class="visitor-box">
+            <input type="text" id="visitorName" placeholder="Enter your name" />
+            <button id="saveNameBtn">Save Name</button>
+            <button id="clearNameBtn" class="btn-muted">Clear Name</button>
+          </div>
+
+          <p id="welcomeMessage" class="message"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Contact</p>
+          <h2>Contact Me</h2>
+        </div>
+
+        <form id="contactForm" class="contact-form card" novalidate>
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" />
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Message subject" />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Write your message here"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p id="form-feedback" class="message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Danah Alalwan. All rights reserved.</p>
+      <a href="#home" id="backToTop" class="back-to-top">Back to Top ↑</a>
+    </div>
+  </footer>
+
+  <div id="projectModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn" aria-label="Close modal">×</button>
+      <h3 id="modalTitle">Project Title</h3>
+      <p id="modalDescription">Project description goes here.</p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
